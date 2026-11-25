@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lwin Min Paing – AI Researcher &amp; DevOps Engineer</title>
+<meta name="description" content="Portfolio of Lwin Min Paing: deep learning–based 3D face reconstruction, human avatars, and cloud/DevOps engineering.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧑%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdeefb;--ink:#2b2352;--muted:#5e5883;--line:rgba(110,90,200,.24);--accent:#6b4df0;--mint:#0b8467;--glass:rgba(255,255,255,.74);color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(180deg,#ffe0f0 0%,#e6defc 50%,#d6f3ee 100%) fixed}
+#bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:"Fredoka","Segoe UI",system-ui,sans-serif;line-height:1.1;margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+main{position:relative;z-index:1}
+header{position:fixed;top:0;left:0;right:0;z-index:5;background:var(--glass);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;max-width:1100px}
+.brand{font:700 1rem "Fredoka",sans-serif;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--muted);text-decoration:none;padding:3px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--mint)}
+#bar{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--mint);transform:scaleX(0);transform-origin:left}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:110px 0 70px}
+section>.wrap{width:100%}
+h1{font-size:clamp(3rem,11vw,7.6rem);font-weight:700;letter-spacing:-.01em}
+.lead{font-size:1.1rem;line-height:1.7;color:var(--muted);max-width:44em;margin:22px 0 30px;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.hint{margin-top:36px;max-width:44em;color:var(--muted);font-size:14px}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.sub{color:var(--muted);max-width:40em;margin:0 0 24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent);background:none;color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.glass{background:var(--glass);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:22px;padding:26px 28px;box-shadow:0 10px 30px rgba(110,90,200,.14)}
+.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .15s ease-out}
+.steps,.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.steps button,.chips button{background:var(--glass);border:1.5px solid var(--line);border-radius:999px;padding:7px 16px}
+.steps button[aria-selected="true"],.chips button[aria-pressed="true"]{background:var(--mint);border-color:var(--mint);color:#fff;font-weight:600}
+.panel{min-height:140px}.panel h3{font-size:1.35rem;margin-bottom:8px}.panel p{margin:0;color:var(--muted);max-width:44em}
+.pubs{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.pubs .t{font-weight:600}.pubs .m{color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.grid .glass{padding:20px 22px}.grid [hidden]{display:none}
+.grid h3{font-size:1.15rem;margin-bottom:6px}.grid p{margin:0;color:var(--muted);font-size:15.5px}
+details{margin-top:10px}summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:15px}
+details p{margin-top:8px!important}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tl button{width:100%;text-align:left;background:var(--glass);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.tl button[aria-expanded="true"]{border-color:var(--mint)}
+.tl .when{font-size:14px;color:var(--muted);display:block}.tl h3{font-size:1.15rem;margin-top:2px}
+.tl .more{display:none;margin:10px 0 0;color:var(--muted);font-size:15.5px}
+.tl button[aria-expanded="true"] .more{display:block}
+.tl .jl,.tl .js{display:none}
+.tl button[aria-expanded="true"]~.jl,.tl button[aria-expanded="true"]~.js{display:block}
+.tl .jl{margin:10px 0 0;padding-left:18px;font-weight:600;font-size:15px}
+.tl .js{margin:4px 0 0;padding:0 0 0 40px;color:var(--muted);font-size:15.5px}.tl .js li{margin:4px 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.cols h3{font-size:1.1rem;margin-bottom:8px}.cols p,.cols ul{margin:0;color:var(--muted);font-size:15.5px}
+.cols ul{padding-left:18px}.cols li{margin:4px 0}.cols strong{color:var(--ink);font-weight:600}
+footer{margin-top:48px;color:var(--muted);font-size:14px}
+@media (max-width:700px){nav{gap:12px;font-size:14px}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<header><div class="wrap">
+  <a class="brand" href="#top">Lwin Min Paing</a>
+  <nav aria-label="Sections"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+</div><div id="bar"></div></header>
+
+<main>
+<section id="top"><div class="wrap">
+  <h1>Lwin Min Paing</h1>
+  <p class="lead">Machine Learning and AI enthusiasm with an Master of Engineering from Chulalongkorn University (GPA: 3.81/4.00) and hands-on experience developing, training, and evaluating deep-learning models using Python and PyTorch. Experienced in computer vision, feature engineering, hyperparameter optimization, and experimental evaluation, with published research and a background in cloud infrastructure automation, and CI/CD. Interested in applying machine learning and data-driven methods to real-world fintech problems.</p>
+  <div class="btns"><a class="btn primary" href="#research">See my research</a><a class="btn" href="#contact">Get in touch</a></div>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <h2>Master’s thesis: 3D face reconstruction from Single 2D Human Image using Deep Learning Method</h2>
+  <p class="sub">Chulalongkorn University, M.Eng., 2026. Pick a stage to see how the pipeline works.</p>
+  <div class="steps" role="tablist" aria-label="Pipeline stages" id="steps"></div>
+  <div class="glass panel tilt" id="panel" role="tabpanel" aria-live="polite"></div>
+</div></section>
+
+<section id="publications"><div class="wrap">
+  <h2>Publications</h2>
+  <ul class="pubs">
+    <li class="glass tilt"><div class="t">Realistic 3D Human Avatar Creation for Metaverse</div>
+      <div class="m">L. M. Paing et al. · ECTI-CON 2025, Bangkok · pp. 1–6 · <a href="https://doi.org/10.1109/ECTI-CON64996.2025.11101093">IEEE Xplore</a></div></li>
+    <li class="glass tilt"><div class="t">Enhancing Fingerprint Recognition System by the Fused Edge Map</div>
+      <div class="m">Lwin Min Paing, Charnchai Pluempitiwiriyawej, Lunchakorn Wuttisittikulkij · Science &amp; Technology Asia, vol. 30, no. 3, pp. 1–12, Sep. 2025 · <a href="https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/261429">Science & Technology Asia (STA)</a></div></li>
+  </ul>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Selected projects</h2>
+  <div class="chips" role="group" aria-label="Filter projects">
+    <button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="3d" aria-pressed="false">3D and avatars</button><button type="button" data-f="ai" aria-pressed="false">AI and vision</button><button type="button" data-f="sys" aria-pressed="false">Systems</button>
+  </div>
+  <div class="grid" id="grid">
+    <article class="glass tilt" data-t="3d ai"><h3>MANGOS avatars</h3><p>Animatable 3D human avatars for an immersive Metaverse platform.</p>
+      <details><summary>More</summary><p>Avatars are created from reconstructed faces and presented as human digital twins. Presented at ECTI-CON 2025.</p></details>
+      <p style="margin-top:10px"><a href="https://www.mangosgo.com/" target="_blank" rel="noopener">Visit MANGOS</a></p></article>
+    <article class="glass tilt" data-t="ai"><h3>LoRA-tuned diffusion model</h3><p>Fine-tuning a generative diffusion model for high-fidelity image generation.</p>
+      <details><summary>More</summary><p>Started as a third-semester project on diffusion models, then extended with LoRA tuning.</p></details></article>
+    <article class="glass tilt" data-t="ai"><h3>Thesis chatbot on LLaMA</h3><p>A mini chatbot that reads theses from the Chula Library.</p>
+      <details><summary>More</summary><p>Lets a reader ask questions about the theses instead of scanning each one.</p></details></article>
+    <article class="glass tilt" data-t="ai"><h3>Siamese face recognition</h3><p>Face detection and recognition with a Siamese neural network.</p>
+      <details><summary>More</summary><p>A second-semester project that compares face pairs to decide whether they match.</p></details></article>
+    <article class="glass tilt" data-t="ai"><h3>Fingerprint matching</h3><p>A fingerprint matching system.</p>
+      <details><summary>More</summary><p>This work grew into the fused edge map paper in Science &amp; Technology Asia.</p></details></article>
+    <article class="glass tilt" data-t="sys"><h3>SDN controller study</h3><p>Bachelor’s thesis on running an OpenDaylight controller in a small environment.</p>
+      <details><summary>More</summary><p>Covers the difficulties and limitations of implementing the controller in a small network.</p></details></article>
+    <article class="glass tilt" data-t="3d"><h3>Unity games</h3><p>Flappy Bird and a Pac-Man shooting game, built in Unity.</p>
+      <details><summary>More</summary><p>Both were first-semester Master’s degree projects.</p></details></article>
+    <article class="glass tilt" data-t="ai"><h3>Machine learning and deep learning projects</h3><p>A collection of machine learning and deep learning projects, shared on GitHub.</p></article>
+  </div>
+  <p style="margin-top:22px"><a href="https://github.com/YOUR-USERNAME">More on GitHub</a></p>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <ol class="tl">
+    <li><button type="button" aria-expanded="false"><span class="when">2024 – 2026</span><h3>Research Assistant (AI Expert), MANGOS</h3><span class="more">Built an end-to-end deep learning 3D face reconstruction framework and animatable avatars. Taught Blender 3D modelling at Boromarajonani College of Nursing, the Royal Police Cadet Academy and the Royal Thai Naval Academy.</span></button>
+      <p class="jl">Job summary</p><ul class="js"><li>Develop an end-to-end 3D face reconstruction model, a deep learning-based framework.</li><li>Create animatable 3D human avatars for the immersive Metaverse (MANGOS).</li><li>Deliver 3D modelling (Blender) training at Boromarajonani College of Nursing in Bangkok, the Royal Police Cadet Academy in Nakhon Pathom, and the Royal Thai Naval Academy (RTNA) in Samut Prakan.</li></ul></li>
+    <li><button type="button" aria-expanded="false"><span class="when">2023 – 2024</span><h3>DevOps Engineer, C3 Co., Ltd.</h3><span class="more">Automated infrastructure on cloud platforms, mentored teams on DevOps practice, and supported engineers using CI/CD pipelines.</span></button>
+      <p class="jl">Job summary</p><ul class="js"><li>Apply DevOps thinking: define and execute a balanced management methodology that organizes a diverse collection of technical activities into a work-stream.</li><li>Provide DevOps thought leadership and mentoring in advisory and delivery contexts, focusing on requirements.</li><li>Encourage and build automated processes wherever possible, and set up the tools and infrastructure needed using cloud platforms.</li><li>Support software engineers who use the CI/CD pipelines.</li></ul></li>
+    <li><button type="button" aria-expanded="false"><span class="when">2022 – 2023</span><h3>IT &amp; DevOps Engineer, Tun Yat Co., Ltd.</h3><span class="more">Set up the cloud platform for V-Shop with an Agile team, built CI/CD pipelines, and added monitoring across Dev, Stage and Prod servers.</span></button>
+      <p class="jl">Job summary</p><ul class="js"><li>Take part in all types of software and application testing: install and configure hardware, software and operating systems, and test and evaluate new technology.</li><li>Set up the cloud platform for V-Shop with the tech team, following Agile methodology.</li><li>Deliver effective DevOps practice to the tech team, such as establishing a CI/CD pipeline and integrating monitoring tools for Dev, Stage and Prod servers.</li></ul></li>
+    <li><button type="button" aria-expanded="false"><span class="when">2020 – 2022</span><h3>IT Instructor, Picasso Art Myanmar</h3><span class="more">Designed a computer basics curriculum, recorded the lectures, and wrote the exams for the certificate.</span></button>
+      <p class="jl">Job summary</p><ul class="js"><li>Create my own course curriculum and deliver the recorded lecture videos to the training center for copyright purposes.</li><li>Create examinations so students earn their certificates.</li><li>Build strong mutual respect between teacher and students.</li><li>Use different teaching techniques based on each student’s level of understanding.</li><li>Created a strong computer basics course and established knowledge-sharing sessions.</li></ul></li>
+  </ol>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills and background</h2>
+  <div class="cols">
+    <div class="glass tilt"><h3>AI and computer vision</h3><p>Deep learning, 3D computer vision, diffusion models, LoRA and fine-tuning, NLP, LLMs, RAG, Optuna.</p></div>
+    <div class="glass tilt"><h3>Engineering</h3><p>Python, SQL, C#, MATLAB, JavaScript and React. AWS, Docker, Kubernetes, CI/CD.</p></div>
+    <div class="glass tilt"><h3>Deep learning tooling</h3><p>PyTorch and CUDA for GPU-based training on large-scale facial datasets, Optuna hyperparameter optimization, generative AI.</p></div>
+    <div class="glass tilt"><h3>3D and Metaverse</h3><p>Blender, Unity, MeshLab, 3D modelling, avatar creation.</p></div>
+    <div class="glass tilt"><h3>Education</h3><ul><li><strong>M.Eng.</strong>, Chulalongkorn University, 2026 (GPA 3.81)</li><li><strong>B.C.Tech.</strong>, University of Computer Studies (Mubin), 2022 (GPA 3.40)</li><li>Exchange, Handong Global University, 2020</li></ul></div>
+    <div class="glass tilt"><h3>Awards and certificates</h3><ul><li>ASEAN/non-ASEAN Graduate Scholarship, 2024</li><li>MMIX MMNOG Fellowship, 2019</li><li>Machine Learning Specialization, Stanford Online</li><li>DevOps on AWS; IBM DevOps, Cloud and Agile; Google IT Support</li></ul></div>
+    <div class="glass tilt"><h3>Conferences</h3><ul><li>ECTI-CON, May 2025</li><li>ANSCSE28, Aug 2025</li><li>WILLS, Mar 2026</li><li>Research Methodologies seminar, 2024</li></ul></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <p class="sub">I’m based in Bangkok and open to research and work in AI related roles. The quickest way to reach me is LINE.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:lwinminpaing.mm@gmail.com">Email me</a>
+    <button class="btn" type="button" id="copy">Copy email</button>
+    <a class="btn" href="https://line.me/ti/p/~lwinmp99" target="_blank" rel="noopener">Add me on LINE by ID</a>
+    <a class="btn" href="https://github.com/lwinmp" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/lwin-min-paing-65486a201/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <footer>© <span id="yr">2026</span> Lwin Min Paing</footer>
+</div></section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script>
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#yr').textContent=new Date().getFullYear();
+
+/* Pipeline stepper */
+(function(){
+  var S=[
+    ['Photo','A single 2D photo of a face is the only input. No depth sensor or multi-view capture is needed.'],
+    ['Encoder','A ResNet-50 encoder reads the photo and predicts the parameters that describe the face: shape, expression and pose.'],
+    ['Decoder','The predicted parameters drive the FLAME 3D face model, serves as a decoder, which outputs a full 3D face mesh.'],
+    ['3D Face','The 3D face is represented as a mesh of vertices and faces, which can be rendered from any viewpoint.'],
+    ['Avatar','The reconstructed face becomes the base for a human digital twin: an animatable 3D avatar for the MANGOS Metaverse platform.'],
+    ['Training','Multi-stage training with custom geometry, photometric, perceptual and regularization losses. Learning rates and loss weights were tuned with Optuna, and failure cases involving pose and facial regions guided each iteration.'],
+
+  ],box=$('#steps'),panel=$('#panel'),btns=[];
+  function pick(i,f){
+    btns.forEach(function(b,k){b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});
+    panel.innerHTML='<h3></h3><p></p>';panel.firstChild.textContent=(i+1)+'. '+S[i][0];panel.lastChild.textContent=S[i][1];
+    if(f)btns[i].focus();
+  }
+  S.forEach(function(s,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=s[0];
+    b.onclick=function(){pick(i)};
+    b.onkeydown=function(e){if(e.key==='ArrowRight')pick((i+1)%S.length,1);if(e.key==='ArrowLeft')pick((i+S.length-1)%S.length,1)};
+    box.appendChild(b);btns.push(b);
+  });
+  pick(0);
+})();
+
+/* Project filter, accordion, copy */
+$$('.chips button').forEach(function(c){c.onclick=function(){
+  $$('.chips button').forEach(function(x){x.setAttribute('aria-pressed',x===c)});
+  $$('#grid article').forEach(function(a){a.hidden=!(c.dataset.f==='all'||a.dataset.t.split(' ').indexOf(c.dataset.f)>-1)});
+}});
+$$('.tl button').forEach(function(b){b.onclick=function(){b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')!=='true')}});
+$('#copy').onclick=function(){
+  var b=this,t='lwinminpaing.mm@gmail.com';
+  function done(m){b.textContent=m;setTimeout(function(){b.textContent='Copy email'},1800)}
+  try{navigator.clipboard.writeText(t).then(function(){done('Copied')},function(){done(t)})}catch(e){done(t)}
+};
+
+/* 3D card tilt */
+if(!RM)$$('.tilt').forEach(function(el){
+  el.addEventListener('pointermove',function(e){
+    if(e.pointerType==='touch')return;
+    var r=el.getBoundingClientRect(),k=el.offsetWidth>600?3:7;
+    el.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*k+'deg');
+    el.style.setProperty('--rx',(.5-(e.clientY-r.top)/r.height)*k+'deg');
+  });
+  el.addEventListener('pointerleave',function(){el.style.removeProperty('--rx');el.style.removeProperty('--ry')});
+});
+
+/* Scroll spy */
+(function(){
+  var links=$$('nav a'),map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if(!window.IntersectionObserver)return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current')});if(map[e.target.id])map[e.target.id].setAttribute('aria-current','true')}
+  })},{rootMargin:'-45% 0px -50% 0px'});
+  $$('section').forEach(function(s){io.observe(s)});
+})();
+
+/* Fly-through scene of cute avatars */
+(function(){
+  if(!window.THREE)return;
+  var cv=$('#bg'),R;
+  try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){return}
+  R.setPixelRatio(Math.min(devicePixelRatio||1,2));
+  var T=THREE,S=new T.Scene();S.fog=new T.FogExp2(0xeadcfb,.026);
+  var C=new T.PerspectiveCamera(60,1,.1,200);
+  S.add(new T.HemisphereLight(0xffffff,0xd9c9ff,.95));
+  var sun=new T.DirectionalLight(0xffffff,.7);sun.position.set(3,6,5);S.add(sun);
+  var sph=new T.SphereGeometry(1,20,14),INK=0x2b2352,i;
+  function mat(c){return new T.MeshLambertMaterial({color:c})}
+  function ball(c,x,y,z,sx,sy,sz){var m=new T.Mesh(sph,mat(c));m.position.set(x,y,z);m.scale.set(sx,sy||sx,sz||sx);return m}
+  function face(g,cy,r){
+    [-1,1].forEach(function(s){
+      g.add(ball(INK,s*.36*r,cy+.05*r,.9*r,.11*r,.15*r,.08*r));
+      g.add(ball(0xffffff,s*.36*r+.03*r,cy+.1*r,.97*r,.04*r));
+      g.add(ball(0xff8fb1,s*.62*r,cy-.2*r,.72*r,.16*r,.1*r,.06*r));
+    });
+    var m=new T.Mesh(new T.TorusGeometry(.11*r,.025*r,6,14,Math.PI),new T.MeshBasicMaterial({color:0xc2457a}));
+    m.rotation.z=Math.PI;m.position.set(0,cy-.2*r,.93*r);g.add(m);
+  }
+  function avatar(skin,hair,shirt,style){
+    var g=new T.Group(),r=.62,f=new T.Group();
+    g.add(ball(skin,0,.55,0,r));
+    var cap=new T.Mesh(new T.SphereGeometry(r*1.07,20,12,0,6.283,0,1.8),mat(hair));
+    cap.position.set(0,.57,-.03);cap.rotation.x=-.4;g.add(cap);
+    if(style===1)g.add(ball(hair,0,1.2,-.1,.24));
+    if(style===2)[-1,1].forEach(function(s){g.add(ball(hair,s*.72,.42,-.1,.2,.3,.2))});
+    f.position.y=.55;face(f,0,r);g.add(f);
+    g.add(ball(shirt,0,-.42,0,.48,.52,.4));
+    [-1,1].forEach(function(s){
+      var a=ball(shirt,s*.55,-.38,0,.14,.3,.14);a.rotation.z=s*.35;g.add(a);
+      g.add(ball(skin,s*.62,-.66,0,.12));g.add(ball(0x6b4df0,s*.2,-.92,.08,.16,.1,.22));
+    });
+    return g;
+  }
+  function bear(fur,inner){
+    var g=new T.Group(),r=.7,f=new T.Group();
+    g.add(ball(fur,0,.1,0,r));
+    [-1,1].forEach(function(s){g.add(ball(fur,s*.5,.7,0,.24));g.add(ball(inner,s*.5,.7,.1,.14))});
+    g.add(ball(inner,0,-.02,.6,.3,.22,.2));g.add(ball(INK,0,.06,.76,.07,.05,.05));
+    f.position.y=.1;face(f,0,r);g.add(f);g.add(ball(fur,0,-.75,0,.55,.5,.45));
+    return g;
+  }
+  function solid(shape,c){
+    var g=new T.ExtrudeGeometry(shape,{depth:.3,bevelEnabled:true,bevelThickness:.12,bevelSize:.12,bevelSegments:3});
+    g.center();return new T.Mesh(g,mat(c));
+  }
+  function cloud(){
+    var g=new T.Group();
+    [[0,0,.9,.6],[-.9,-.1,.6,.5],[.95,-.1,.65,.5],[.1,.45,.6,.55]].forEach(function(p){g.add(ball(0xffffff,p[0],p[1],0,p[2],p[3],.5))});
+    return g;
+  }
+  var heart=new T.Shape();heart.moveTo(0,-.7);heart.bezierCurveTo(-1.3,.1,-.7,1,0,.45);heart.bezierCurveTo(.7,1,1.3,.1,0,-.7);
+  var star=new T.Shape();
+  for(i=0;i<10;i++){var rr=i%2?.42:.95,an=i*Math.PI/5+Math.PI/2;star[i?'lineTo':'moveTo'](Math.cos(an)*rr,Math.sin(an)*rr)}
+  var skins=[0xffd9b8,0xf1b98f,0xc98d63,0x8d5b3d],hairs=[0x3a2b4d,0x7a4a2b,0xff8fb1,0x5aa0ff,0xf2c14e],
+      shirts=[0xff8fb1,0x8fe3d0,0xa99bff,0xffd45e,0x7ec8ff],kinds=['a','h','b','s','a','c','a','h'],shapes=[];
+  for(i=0;i<36;i++){
+    var k=kinds[i%8],o;
+    if(k==='a')o=avatar(skins[i%4],hairs[(i*3)%5],shirts[(i*2)%5],i%3);
+    else if(k==='b')o=bear([0xc58b5c,0xf6efe7,0xf4b6c8][i%3],0xffc9d8);
+    else if(k==='h')o=solid(heart,0xff6fa5);
+    else if(k==='s')o=solid(star,0xffd45e);
+    else o=cloud();
+    var b=(k==='c'?1.3:k==='a'||k==='b'?1:.9)*(.9+Math.random()*.4);
+    o.position.set((i%2?1:-1)*(3.2+Math.random()*4.5),(k==='c'?2.2:0)+(Math.random()-.5)*5,-2-i*1.9);
+    o.userData={y:o.position.y,base:b,s:b,ph:Math.random()*6,h:0,vy:0};
+    o.scale.setScalar(b);S.add(o);shapes.push(o);
+  }
+  var fl=new T.Mesh(new T.PlaneGeometry(200,200),mat(0xc9f3e3));fl.rotation.x=-Math.PI/2;fl.position.set(0,-4.6,-60);S.add(fl);
+  var N=900,pos=new Float32Array(N*3),col=new Float32Array(N*3),pal=[0xff8fb1,0xffd45e,0x8fe3d0,0xa99bff],cc=new T.Color();
+  for(i=0;i<N;i++){
+    pos[i*3]=(Math.random()-.5)*30;pos[i*3+1]=-4+Math.random()*12;pos[i*3+2]=4-Math.random()*74;
+    cc.setHex(pal[i%4]);col[i*3]=cc.r;col[i*3+1]=cc.g;col[i*3+2]=cc.b;
+  }
+  var pg=new T.BufferGeometry();pg.setAttribute('position',new T.BufferAttribute(pos,3));pg.setAttribute('color',new T.BufferAttribute(col,3));
+  var dot=document.createElement('canvas');dot.width=dot.height=32;var dx=dot.getContext('2d');dx.beginPath();dx.arc(16,16,14,0,7);dx.fillStyle='#fff';dx.fill();
+  S.add(new T.Points(pg,new T.PointsMaterial({size:.16,map:new T.CanvasTexture(dot),vertexColors:true,transparent:true,alphaTest:.3,depthWrite:false})));
+
+  var tp=0,cp=0,mx=0,my=0,nx=-2,ny=-2,ray=new T.Raycaster(),t=0,hov=null;
+  function size(){R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();if(RM)frame()}
+  function scroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;tp=h>0?scrollY/h:0;
+    $('#bar').style.transform='scaleX('+tp+')';if(RM)frame();
+  }
+  function frame(){
+    t+=.01;cp=RM?tp:cp+(tp-cp)*.06;
+    C.position.set(mx*1.3+Math.sin(cp*7)*1.4,my*.9,6-cp*70);
+    C.lookAt(mx*1.2+Math.sin(cp*7+.6)*1.4,my*.7,C.position.z-10);
+    shapes.forEach(function(g){
+      var d=g.userData;
+      if(d.vy||d.h){d.h+=d.vy;d.vy-=.012;if(d.h<0){d.h=0;d.vy=0}}
+      g.position.y=d.y+Math.sin(t+d.ph)*.25+d.h;
+      g.rotation.y=Math.sin(t*.7+d.ph)*(g===hov?.1:.5);g.rotation.z=Math.sin(t+d.ph)*.05;
+      d.s+=((g===hov?d.base*1.25:d.base)-d.s)*.15;g.scale.setScalar(d.s);
+    });
+    if(!RM){
+      ray.setFromCamera({x:nx,y:ny},C);var h=ray.intersectObjects(shapes,true)[0];
+      if(h){var o=h.object;while(o.parent!==S)o=o.parent;hov=o}else hov=null;
+      document.body.style.cursor=hov?'pointer':'';
+    }
+    R.render(S,C);
+    if(!RM)requestAnimationFrame(frame);
+  }
+  addEventListener('resize',size);addEventListener('scroll',scroll,{passive:true});
+  addEventListener('pointermove',function(e){
+    mx=e.clientX/innerWidth*2-1;my=-(e.clientY/innerHeight*2-1);
+    var ui=e.target.closest&&e.target.closest('.glass,a,button,summary,header');nx=ui?-2:mx;ny=ui?-2:my;
+  });
+  addEventListener('click',function(){if(hov&&!RM)hov.userData.vy=.2});
+  size();scroll();if(!RM)frame();
+})();
+</script>
+</body>
+</html>
